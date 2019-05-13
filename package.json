@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "mdx-deck css-nuggets.mdx"
+    "start": "mdx-deck css-nuggets.mdx",
+    "build": "mdx-deck build css-nuggets.mdx && cp -R ./images ./dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "cpx": "^1.5.0",
     "mdx-deck": "^2.3.2"
   }
 }
