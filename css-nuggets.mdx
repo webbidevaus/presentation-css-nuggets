@@ -113,6 +113,86 @@ export const themes = [syntaxHighlighterPrism, future];
 
 ---
 
+Use _anything_ as your text background
+
+```css
+background-clip: text;
+```
+
+---
+
+<span style={{
+  "margin":"0",
+  "backgroundRepeat": "no-repeat",
+  "fontSize":"300px",
+  "fontWeight": "bold",
+  "background":"url(https://media.giphy.com/media/l2Sqf1Y2g9C3F97kA/giphy.gif)",
+  "color":"transparent",
+  "WebkitBackgroundClip":"text"
+}}>HELLO</span>
+
+---
+
+# CSS Mobile device detection 😓
+
+```css
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+  /* Probably an iPhone in portrait mode */
+}
+```
+
+---
+
+# 🎉 Pointer media query
+
+```css
+@media (pointer:coarse) {
+  /* CSS rules for touch screen */
+}
+@media (hover) {
+  /* CSS rules for devices that have hover support */
+}
+```
+
+---
+
+# `gap` property with flexbox
+
+---
+
+<Invert>
+  <Image size="contain" src="images/gap-1.png" />
+</Invert>
+
+---
+
+<Invert>
+  <Image size="contain" src="images/gap-2.png" />
+</Invert>
+
+---
+
+<Invert>
+  <Image size="contain" src="images/gap-3.png" />
+</Invert>
+
+---
+
+```css
+gap: 20px;
+gap: 1em;
+gap: 3vmin;
+
+/* ... So */
+gap: <'row-gap'> <'column-gap'>
+```
+
+---
+
 # Never Use Margin Top + Right
 
 ...or bottom + left
@@ -194,6 +274,14 @@ Here are adjacent elements, but margin collapsing also happens with parent & fir
     </li>
   </ul>
 </Notes>
+
+---
+
+# Top padding with percentages
+
+---
+
+Use case: div with aspect-ratio
 
 ---
 
