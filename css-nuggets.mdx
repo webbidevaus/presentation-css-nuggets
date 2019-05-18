@@ -1,7 +1,7 @@
-import { Image } from 'mdx-deck'
-import { syntaxHighlighterPrism } from '@mdx-deck/themes'
-import { future } from '@mdx-deck/themes'
-export const themes = [syntaxHighlighterPrism, future]
+import { Appear, Image, Notes } from "mdx-deck";
+import { syntaxHighlighterPrism } from "@mdx-deck/themes";
+import { future } from "@mdx-deck/themes";
+export const themes = [syntaxHighlighterPrism, future];
 
 # Webbidevaus.fi
 
@@ -10,6 +10,102 @@ export const themes = [syntaxHighlighterPrism, future]
 ---
 
 <Image src="images/nuggets.jpg" />
+
+---
+
+## Nugget 1
+
+# font-display
+
+---
+
+```css
+@font-face {
+  font-family: "my-font";
+  src: url(my-font.woff2) format("woff2");
+}
+```
+
+<Notes>
+  This is more or less how you traditionally load a web font: Specify name and
+  source.
+</Notes>
+
+---
+
+# FOUT & FOIT
+
+<Appear>
+  <div>Flash of Unstyled Text</div>
+  <div> Flash of Invisible Text</div>
+</Appear>
+
+---
+
+# font-display
+
+<ul>
+  <Appear>
+    <li>block</li>
+    <li>swap</li>
+    <li>fallback</li>
+    <li>optional</li>
+  </Appear>
+</ul>
+
+<Notes>
+  <ul>
+    <li>Block: Invisible for 3 secs, then fallback</li>
+    <li>Swap: Fallback immediately, custom font swapped</li>
+    <li>Fallback: Invisible for 100ms, then fallback</li>
+    <li>
+      Optional: Like fallback, but browser can choose not to show web font at
+      all
+    </li>
+  </ul>
+</Notes>
+
+---
+
+<img src="images/fontdisplay.png" />
+
+<p><a href="https://font-display.glitch.me/">https://font-display.glitch.me/</a></p>
+
+<Notes>
+  <ul>
+    <li>Block: Invisible for 3 secs, then fallback</li>
+    <li>Swap: Fallback immediately, custom font swapped</li>
+    <li>Fallback: Invisible for 100ms, then fallback</li>
+    <li>
+      Optional: Like fallback, but browser can choose not to show web font at
+      all
+    </li>
+  </ul>
+  <p>This is great. I use Google Fonts. What can I do?</p>
+</Notes>
+
+---
+
+# Google Fonts <3 font-display
+
+<Notes>Google Fonts just rolled out support for font-display!</Notes>
+
+---
+
+<img src="images/googleswap.png" />
+<p><a href="https://twitter.com/addyosmani/status/1128548064287952896">https://twitter.com/addyosmani/status/1128548064287952896</a></p>
+
+<Notes>Just add a query parameter with the wanted font-display value.</Notes>
+
+---
+
+```css
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url(https://fonts...) format("woff2");
+}
+```
 
 ---
 
