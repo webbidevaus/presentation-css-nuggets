@@ -1,6 +1,8 @@
 import { Appear, Image, Notes } from "mdx-deck";
 import { syntaxHighlighterPrism } from "@mdx-deck/themes";
 import { future } from "@mdx-deck/themes";
+import { Invert } from "mdx-deck/layouts";
+import WithBgImage from "./components/WithBgImage";
 export const themes = [syntaxHighlighterPrism, future];
 
 # Webbidevaus.fi
@@ -135,7 +137,70 @@ export const themes = [syntaxHighlighterPrism, future];
 
 ---
 
-# Margin Collapse
+### Margins. How do they work?
+
+![](images/margins.jpg)
+
+---
+
+<iframe
+  style={{ width: "100vw", height: "100vh" }}
+  scrolling="no"
+  title="Margin collapse"
+  src="//codepen.io/anttti/embed/yWXZZZ/?height=265&theme-id=dark&default-tab=css,result"
+  frameBorder="no"
+>
+  See the Pen{" "}
+  <a href="https://codepen.io/anttti/pen/yWXZZZ/">Margin collapse</a> by Antti
+  Mattila (<a href="https://codepen.io/anttti">@anttti</a>) on{" "}
+  <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<Notes>
+  Margins collapse when two vertical margins come in contact with one another.
+  If one margin is greater than the other, the bigger overrides the smaller (as
+  usually happens in life).
+</Notes>
+
+---
+
+<iframe
+  style={{ width: "100vw", height: "100vh" }}
+  scrolling="no"
+  title="Margin collapse"
+  src="//codepen.io/anttti/embed/dERaQX/?height=265&theme-id=dark&default-tab=css,result"
+  frameBorder="no"
+>
+  See the Pen{" "}
+  <a href="https://codepen.io/anttti/pen/dERaQX/">Margin collapse</a> by Antti
+  Mattila (<a href="https://codepen.io/anttti">@anttti</a>) on{" "}
+  <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<Notes>
+  Here's another example demonstrating how margin collapsing happens only on the
+  vertical axis.
+</Notes>
+
+---
+
+# Weird, huh?!
+
+<Notes>
+  <ul>
+    <li>
+      Margins of floating and absolutely positioned elements never collapse.
+    </li>
+    <li>
+      If one margin is negative, the negative margin is subtracted from the
+      positive margin.
+    </li>
+    <li>
+      The general meaning of "margin" isn't to convey "move this over by 10px"
+      but rather, "there must be 10px of empty space beside this element."
+    </li>
+  </ul>
+</Notes>
 
 ---
 
@@ -191,8 +256,15 @@ e
 ```
 
 <Notes>
-Works with border-radius too, but have to think corners instead of sides, starting from top left.
-<Notes>
+  Works with border-radius too, but have to think corners instead of sides,
+  starting from top left.
+</Notes>
+
+---
+
+<Invert>
+  <Image size="contain" src="images/clock.png" />
+</Invert>
 
 ---
 
