@@ -113,7 +113,19 @@ export const themes = [syntaxHighlighterPrism, future];
 
 ---
 
-Use _anything_ as your text background
+<!-- Riku -->
+
+## Nugget 2
+
+<img style={{width: 200}} src="https://www.bk.com/sites/default/files/03156-5%2010pcChickenNuggets%20500x540_CR.png" />
+
+Use <span style={{
+  "background":"url(https://www.bk.com/sites/default/files/03156-5%2010pcChickenNuggets%20500x540_CR.png)",
+  "color":"transparent",
+  "backgroundSize": "200%",
+  "backgroundPosition": "40%",
+  "WebkitBackgroundClip":"text"
+}}>anything</span> as your text background
 
 ```css
 background-clip: text;
@@ -127,13 +139,77 @@ background-clip: text;
   "fontSize":"300px",
   "fontWeight": "bold",
   "background":"url(https://media.giphy.com/media/l2Sqf1Y2g9C3F97kA/giphy.gif)",
+  "color":"#fff"
+}}>HELLO</span>
+
+```css
+span {
+  background: url(party.gif);
+}
+```
+
+<Notes>
+Apply a background colour / image / gradient to element containing text
+</Notes>
+
+---
+
+<span style={{
+  "margin":"0",
+  "backgroundRepeat": "no-repeat",
+  "fontSize":"300px",
+  "fontWeight": "bold",
+  "background":"url(https://media.giphy.com/media/l2Sqf1Y2g9C3F97kA/giphy.gif)",
   "color":"transparent",
   "WebkitBackgroundClip":"text"
 }}>HELLO</span>
 
+
+```css
+span {
+  background: url(party.gif);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+```
 ---
 
-# CSS Mobile device detection 😓
+<iframe style={{ width: "100vw", height: "100vh" }} scrolling="no" title="zQdrzP" src="//codepen.io/rikukissa/embed/zQdrzP/?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/rikukissa/pen/zQdrzP/'>zQdrzP</a> by Riku Rouvila
+  (<a href='https://codepen.io/rikukissa'>@rikukissa</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+
+---
+
+<!-- Riku -->
+
+## Nugget 3
+
+### INSERT SUMMARY HERE
+
+---
+
+Start with the smallest device size 📱
+<img style={{width: 1000}} src="images/mobile-first.png" />
+
+<Notes>
+  All devtools support mobile mode already
+</Notes>
+
+---
+
+<Invert>
+  <Image size="contain" src="images/mobile.png" />
+</Invert>
+
+<Notes>
+  It's way easier to work this way. Practical reasons
+</Notes>
+
+---
+
+# CSS Mobile device detection kinda sucks 😓
 
 ```css
 @media only screen
@@ -144,6 +220,14 @@ and (orientation: portrait) {
   /* Probably an iPhone in portrait mode */
 }
 ```
+
+---
+
+"... device landscape is slowly blurring the lines between what things are and aren't touch devices"
+
+<Notes>
+  iPad Pros are touch-only with the resolution of a 13" laptop
+</Notes>
 
 ---
 
@@ -158,7 +242,30 @@ and (orientation: portrait) {
 }
 ```
 
+<Notes>
+How about devices that have both pointers?
+</Notes>
+
 ---
+
+<Invert>
+  <img style={{width: 600}} src="images/visual-diff.gif" />
+
+  Visual diffing with percy.io
+</Invert>
+
+---
+
+### Nugget 4
+# Grid
+
+---
+
+TBD Antti
+
+---
+
+### Nugget 5
 
 # `gap` property with flexbox
 
@@ -193,19 +300,7 @@ gap: <'row-gap'> <'column-gap'>
 
 ---
 
-# Never Use Margin Top + Right
-
-...or bottom + left
-
----
-
-# Grid
-
----
-
-TBD Antti
-
----
+### Nugget 6
 
 # Margins. How do they work?
 
@@ -277,13 +372,31 @@ Here are adjacent elements, but margin collapsing also happens with parent & fir
 
 ---
 
+### Nugget 7
+
 # Top padding with percentages
 
 ---
 
-Use case: div with aspect-ratio
+<iframe style={{ width: "100vw", height: "100vh" }} scrolling="no" title="Mdvygr" src="//codepen.io/rikukissa/embed/Mdvygr/?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/rikukissa/pen/Mdvygr/'>Mdvygr</a> by Riku Rouvila
+  (<a href='https://codepen.io/rikukissa'>@rikukissa</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
+
+### Use case
+div with a background-image and a fixed aspect-ratio
+
+---
+
+<iframe style={{ width: "100vw", height: "100vh" }} scrolling="no" title="eaEZYr" src="//codepen.io/rikukissa/embed/eaEZYr/?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/rikukissa/pen/eaEZYr/'>eaEZYr</a> by Riku Rouvila
+  (<a href='https://codepen.io/rikukissa'>@rikukissa</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+
 
 # CSS TRouBLe?!
 
