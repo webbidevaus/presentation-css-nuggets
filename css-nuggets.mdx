@@ -1,9 +1,19 @@
-import { Appear, Image, Notes } from "mdx-deck";
+import { Appear, Head, Image, Notes } from "mdx-deck";
 import { syntaxHighlighterPrism } from "@mdx-deck/themes";
-import { future } from "@mdx-deck/themes";
+import theme from "./theme";
+
 import { Invert } from "mdx-deck/layouts";
 import WithBgImage from "./components/WithBgImage";
-export const themes = [syntaxHighlighterPrism, future];
+export const themes = [syntaxHighlighterPrism, theme];
+
+<Head>
+  <title>Webbidevaus.fi CSSNuggets™ 8 kpl</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,900&amp;display=swap"
+    rel="stylesheet"
+  />
+  <link href="styles.css" rel="stylesheet" />
+</Head>
 
 # Webbidevaus.fi
 
@@ -71,7 +81,7 @@ export const themes = [syntaxHighlighterPrism, future];
 
 ---
 
-<img src="images/fontdisplay.png" />
+<img style={{ width: "80%" }} src="images/fontdisplay.png" />
 
 <p><a href="https://font-display.glitch.me/">https://font-display.glitch.me/</a></p>
 
@@ -96,8 +106,9 @@ export const themes = [syntaxHighlighterPrism, future];
 
 ---
 
-<img src="images/googleswap.png" />
-<p><a href="https://twitter.com/addyosmani/status/1128548064287952896">https://twitter.com/addyosmani/status/1128548064287952896</a></p>
+<img style={{ width: "70%" }} src="images/googleswap.png" />
+
+<a href="https://twitter.com/addyosmani/status/1128548064287952896">https://twitter.com/addyosmani/status/<br/>1128548064287952896</a>
 
 <Notes>Just add a query parameter with the wanted font-display value.</Notes>
 
@@ -370,7 +381,11 @@ display: flex;
 ---
 
 <a href="https://www.rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/">
-  www.rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/
+  www.rachelandrew.co.uk/archives/2016/11/26/
+  <br />
+  should-i-try-to-use-the-ie-
+  <br />
+  implementation-of-css-grid-layout/
 </a>
 
 <Notes>

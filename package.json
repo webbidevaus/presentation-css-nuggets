@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "mdx-deck css-nuggets.mdx",
-    "build": "mdx-deck build css-nuggets.mdx && cp -R ./images ./dist"
+    "build": "mdx-deck build css-nuggets.mdx && cp -R ./images ./dist && cp ./styles.css ./dist/styles.css"
   },
   "keywords": [],
   "author": "",
