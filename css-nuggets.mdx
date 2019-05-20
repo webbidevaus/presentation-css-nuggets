@@ -117,7 +117,7 @@ export const themes = [syntaxHighlighterPrism, future];
 
 ## Nugget 2
 
-<img style={{width: 200}} src="images/nuggets2.png" />
+<img style={{ width: 200 }} src="images/nuggets2.png" />
 
 Use <span style={{
   "background":"url(images/nuggets2.png)",
@@ -133,14 +133,19 @@ background-clip: text;
 
 ---
 
-<span style={{
-  "margin":"0",
-  "backgroundRepeat": "no-repeat",
-  "fontSize":"300px",
-  "fontWeight": "bold",
-  "background":"url(https://media.giphy.com/media/l2Sqf1Y2g9C3F97kA/giphy.gif)",
-  "color":"#fff"
-}}>HELLO</span>
+<span
+  style={{
+    margin: "0",
+    backgroundRepeat: "no-repeat",
+    fontSize: "300px",
+    fontWeight: "bold",
+    background:
+      "url(https://media.giphy.com/media/l2Sqf1Y2g9C3F97kA/giphy.gif)",
+    color: "#fff"
+  }}
+>
+  HELLO
+</span>
 
 ```css
 span {
@@ -149,21 +154,25 @@ span {
 ```
 
 <Notes>
-Apply a background colour / image / gradient to element containing text
+  Apply a background colour / image / gradient to element containing text
 </Notes>
 
 ---
 
-<span style={{
-  "margin":"0",
-  "backgroundRepeat": "no-repeat",
-  "fontSize":"300px",
-  "fontWeight": "bold",
-  "background":"url(https://media.giphy.com/media/l2Sqf1Y2g9C3F97kA/giphy.gif)",
-  "color":"transparent",
-  "WebkitBackgroundClip":"text"
-}}>HELLO</span>
-
+<span
+  style={{
+    margin: "0",
+    backgroundRepeat: "no-repeat",
+    fontSize: "300px",
+    fontWeight: "bold",
+    background:
+      "url(https://media.giphy.com/media/l2Sqf1Y2g9C3F97kA/giphy.gif)",
+    color: "transparent",
+    WebkitBackgroundClip: "text"
+  }}
+>
+  HELLO
+</span>
 
 ```css
 span {
@@ -172,13 +181,22 @@ span {
   color: transparent;
 }
 ```
+
 ---
 
-<iframe style={{ width: "100vw", height: "100vh" }} scrolling="no" title="zQdrzP" src="//codepen.io/rikukissa/embed/zQdrzP/?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/rikukissa/pen/zQdrzP/'>zQdrzP</a> by Riku Rouvila
-  (<a href='https://codepen.io/rikukissa'>@rikukissa</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe
+  style={{ width: "100vw", height: "100vh" }}
+  scrolling="no"
+  title="zQdrzP"
+  src="//codepen.io/rikukissa/embed/zQdrzP/?height=265&theme-id=0&default-tab=css,result"
+  frameborder="no"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/rikukissa/pen/zQdrzP/">zQdrzP</a> by
+  Riku Rouvila (<a href="https://codepen.io/rikukissa">@rikukissa</a>) on{" "}
+  <a href="https://codepen.io">CodePen</a>.
 </iframe>
-
 
 ---
 
@@ -191,11 +209,10 @@ span {
 ---
 
 Start with the smallest device size 📱
-<img style={{width: 1000}} src="images/mobile-first.png" />
 
-<Notes>
-  All devtools support mobile mode already
-</Notes>
+<img style={{ width: 1000 }} src="images/mobile-first.png" />
+
+<Notes>All devtools support mobile mode already</Notes>
 
 ---
 
@@ -203,20 +220,14 @@ Start with the smallest device size 📱
   <Image size="contain" src="images/mobile.png" />
 </Invert>
 
-<Notes>
-  It's way easier to work this way. Practical reasons
-</Notes>
+<Notes>It's way easier to work this way. Practical reasons</Notes>
 
 ---
 
 # CSS Mobile device detection kinda sucks 😓
 
 ```css
-@media only screen
-and (min-device-width: 375px)
-and (max-device-width: 667px)
-and (-webkit-min-device-pixel-ratio: 2)
-and (orientation: portrait) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   /* Probably an iPhone in portrait mode */
 }
 ```
@@ -225,16 +236,14 @@ and (orientation: portrait) {
 
 "... device landscape is slowly blurring the lines between what things are and aren't touch devices"
 
-<Notes>
-  iPad Pros are touch-only with the resolution of a 13" laptop
-</Notes>
+<Notes>iPad Pros are touch-only with the resolution of a 13" laptop</Notes>
 
 ---
 
 # 🎉 Pointer media query
 
 ```css
-@media (pointer:coarse) {
+@media (pointer: coarse) {
   /* CSS rules for touch screen */
 }
 @media (hover) {
@@ -242,26 +251,147 @@ and (orientation: portrait) {
 }
 ```
 
-<Notes>
-How about devices that have both pointers?
-</Notes>
+<Notes>How about devices that have both pointers?</Notes>
 
 ---
 
 <Invert>
   <img style={{width: 600}} src="images/visual-diff.gif" />
 
-  Visual diffing with percy.io
+Visual diffing with percy.io
+
 </Invert>
 
 ---
 
 ### Nugget 4
+
 # Grid
 
 ---
 
-TBD Antti
+### Remember these f\*ckers?
+
+```css
+display: box;
+display: -webkit-box;
+display: flexbox;
+display: -ms-flexbox;
+display: flex;
+...
+```
+
+<Notes>
+  <ul>
+    <li>Got burnt by flexbox and it's browser support</li>
+    <li>Support used to be spotty and random</li>
+    <li>
+      Development in browsers happened in public using vendor-prefixed CSS
+      properties
+    </li>
+    <li>Different spec implementations</li>
+  </ul>
+</Notes>
+
+---
+
+<Image size="contain" src="images/different.jpg" />
+
+---
+
+# Only one\* implementation
+
+<Notes>
+  <ul>
+    <li>Only one implementation</li>
+    <li>Works the same in every browser</li>
+    <li>Was shipped the same time for all the major browsers</li>
+  </ul>
+</Notes>
+
+---
+
+# \*
+
+<Notes>Of course there's an asterisk.</Notes>
+
+---
+
+<Image size="contain" src="images/bsod.jpg" />
+
+<Notes>
+  <ul>
+    <li>With the exception of the internet's favorite joke</li>
+    <li>Grid started in IE 10!</li>
+    <li>Support the 2012 ms-grid</li>
+  </ul>
+</Notes>
+
+---
+
+<Image size="contain" src="images/isitsafe.jpg" />
+
+---
+
+<Image size="contain" src="images/caniuse-grid.jpg" />
+
+<Notes>
+  <ul>
+    <li>IE 10: 0,06% world, 0,02% FI</li>
+    <li>IE 11: 2,3% world, 1,82% FI</li>
+    <li>Given the market share of the supported, I'd say...</li>
+  </ul>
+</Notes>
+
+---
+
+<Image size="contain" src="images/yes.jpg" />
+
+<Notes>...YES, and for IE you can __progressively__ rock grid support</Notes>
+
+---
+
+<a href="https://www.rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/">
+  www.rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/
+</a>
+
+<Notes>
+  IE does not support:
+  <ul>
+    <li>Auto-placement</li>
+    <li>Gutters</li>
+    <li>Grid-template-areas</li>
+  </ul>
+</Notes>
+
+---
+
+```js
+autoprefixer({
+  grid: true
+});
+```
+
+<Notes>
+  Autoprefixer does grid, but it's opt-in because the same named properties
+  behave differently.
+</Notes>
+
+---
+
+## Strategy for grid
+
+<ul>
+  <Appear>
+    <li>Mobile first</li>
+    <li>@supports feature query</li>
+    <li>Just doing the grid in IE style</li>
+  </Appear>
+</ul>
+
+<Notes>
+  @supports: First write CSS that works everywhere, then add @supports
+</Notes>
 
 ---
 
@@ -295,7 +425,7 @@ gap: 1em;
 gap: 3vmin;
 
 /* ... So */
-gap: <'row-gap'> <'column-gap'>
+gap: < "row-gap" > < "column-gap" >;
 ```
 
 ---
@@ -378,25 +508,43 @@ Here are adjacent elements, but margin collapsing also happens with parent & fir
 
 ---
 
-<iframe style={{ width: "100vw", height: "100vh" }} scrolling="no" title="Mdvygr" src="//codepen.io/rikukissa/embed/Mdvygr/?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/rikukissa/pen/Mdvygr/'>Mdvygr</a> by Riku Rouvila
-  (<a href='https://codepen.io/rikukissa'>@rikukissa</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe
+  style={{ width: "100vw", height: "100vh" }}
+  scrolling="no"
+  title="Mdvygr"
+  src="//codepen.io/rikukissa/embed/Mdvygr/?height=265&theme-id=0&default-tab=css,result"
+  frameborder="no"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/rikukissa/pen/Mdvygr/">Mdvygr</a> by
+  Riku Rouvila (<a href="https://codepen.io/rikukissa">@rikukissa</a>) on{" "}
+  <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
 ---
 
 ### Use case
+
 div with a background-image and a fixed aspect-ratio
 
 ---
 
-<iframe style={{ width: "100vw", height: "100vh" }} scrolling="no" title="eaEZYr" src="//codepen.io/rikukissa/embed/eaEZYr/?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/rikukissa/pen/eaEZYr/'>eaEZYr</a> by Riku Rouvila
-  (<a href='https://codepen.io/rikukissa'>@rikukissa</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe
+  style={{ width: "100vw", height: "100vh" }}
+  scrolling="no"
+  title="eaEZYr"
+  src="//codepen.io/rikukissa/embed/eaEZYr/?height=265&theme-id=0&default-tab=css,result"
+  frameborder="no"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/rikukissa/pen/eaEZYr/">eaEZYr</a> by
+  Riku Rouvila (<a href="https://codepen.io/rikukissa">@rikukissa</a>) on{" "}
+  <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
 ---
-
 
 # CSS TRouBLe?!
 
