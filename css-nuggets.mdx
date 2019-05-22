@@ -4,6 +4,7 @@ import theme from "./theme";
 
 import { Invert } from "mdx-deck/layouts";
 import WithBgImage from "./components/WithBgImage";
+import Flex from "./components/Flex";
 export const themes = [syntaxHighlighterPrism, theme];
 
 <Head>
@@ -18,6 +19,22 @@ export const themes = [syntaxHighlighterPrism, theme];
 # Webbidevaus.fi
 
 ## CSSNuggets™ 8 kpl
+
+<Notes>
+  - Esittelyt ja millä asialla
+</Notes>
+
+---
+
+# moro
+
+---
+
+# @rikurouvila
+
+---
+
+# @anttti
 
 ---
 
@@ -151,6 +168,40 @@ background-clip: text;
     fontSize: "300px",
     fontWeight: "bold",
     background:
+      "url(https://media.giphy.com/media/12p8b9acuBMdYQ/giphy.gif)",
+    color: "transparent",
+    WebkitBackgroundClip: "text"
+  }}
+>
+  LOL
+</span>
+
+---
+
+<iframe
+  style={{ width: "100vw", height: "100vh" }}
+  scrolling="no"
+  title="zQdrzP"
+  src="//codepen.io/rikukissa/embed/zQdrzP/?height=265&theme-id=0&default-tab=css,result"
+  frameborder="no"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/rikukissa/pen/zQdrzP/">zQdrzP</a> by
+  Riku Rouvila (<a href="https://codepen.io/rikukissa">@rikukissa</a>) on{" "}
+  <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+
+---
+
+<span
+  style={{
+    margin: "0",
+    backgroundRepeat: "no-repeat",
+    fontSize: "300px",
+    fontWeight: "bold",
+    background:
       "url(https://media.giphy.com/media/l2Sqf1Y2g9C3F97kA/giphy.gif)",
     color: "#fff"
   }}
@@ -159,7 +210,7 @@ background-clip: text;
 </span>
 
 ```css
-span {
+h1 {
   background: url(party.gif);
 }
 ```
@@ -186,28 +237,12 @@ span {
 </span>
 
 ```css
-span {
+h1 {
   background: url(party.gif);
-  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 ```
-
----
-
-<iframe
-  style={{ width: "100vw", height: "100vh" }}
-  scrolling="no"
-  title="zQdrzP"
-  src="//codepen.io/rikukissa/embed/zQdrzP/?height=265&theme-id=0&default-tab=css,result"
-  frameborder="no"
-  allowtransparency="true"
-  allowfullscreen="true"
->
-  See the Pen <a href="https://codepen.io/rikukissa/pen/zQdrzP/">zQdrzP</a> by
-  Riku Rouvila (<a href="https://codepen.io/rikukissa">@rikukissa</a>) on{" "}
-  <a href="https://codepen.io">CodePen</a>.
-</iframe>
 
 ---
 
@@ -229,71 +264,7 @@ span {
 
 ---
 
-<!-- Riku -->
-
-## Nugget 3
-
-### INSERT SUMMARY HERE
-
----
-
-Start with the smallest device size 📱
-
-<img style={{ width: 1000 }} src="images/mobile-first.png" />
-
-<Notes>All devtools support mobile mode already</Notes>
-
----
-
-<Invert>
-  <Image size="contain" src="images/responsive.gif" />
-</Invert>
-
-<Notes>It's way easier to work this way. Practical reasons</Notes>
-
----
-
-# CSS Mobile device detection kinda sucks 😓
-
-```css
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-  /* Probably an iPhone in portrait mode */
-}
-```
-
----
-
-"... device landscape is slowly blurring the lines between what things are and aren't touch devices"
-
-<Notes>iPad Pros are touch-only with the resolution of a 13" laptop</Notes>
-
----
-
-# 🎉 Pointer media query
-
-```css
-@media (pointer: coarse) {
-  /* CSS rules for touch screen */
-}
-@media (hover) {
-  /* CSS rules for devices that have hover support */
-}
-```
-
-<Notes>How about devices that have both pointers?</Notes>
-
----
-
-<Invert>
-  <img style={{width: 600}} src="images/visual-diff.gif" />
-
-Visual diffing with percy.io
-
-</Invert>
-
----
-
-### Nugget 4
+### Nugget 3
 
 # Grid
 
@@ -430,25 +401,64 @@ autoprefixer({
 
 ### Nugget 5
 
-# `gap` property with flexbox
+# <img src="images/gap.svg" />
+
+## property with flexbox
+
+---
+
+
+<Flex />
+
+---
+
+<Flex example={2} />
+
+```css
+.item {
+  margin-bottom: 0.5em;
+}
+```
+
+---
+
+<Flex example={3} />
+
+# ☝️<br /> Issue
 
 ---
 
 <Invert>
-  <Image size="contain" src="images/gap-1.png" />
+  <img src="images/blogpost.jpg" />
 </Invert>
 
 ---
 
-<Invert>
-  <Image size="contain" src="images/gap-2.png" />
-</Invert>
+<Flex example={2} />
+
+```css
+.item {
+  margin-bottom: 0.5em;
+}
+```
 
 ---
 
-<Invert>
-  <Image size="contain" src="images/gap-3.png" />
-</Invert>
+<Flex example={4} />
+
+```css
+.container {
+  display: flex;
+  gap: 0.5em;
+}
+```
+
+<Notes>
+  <ul>
+    <li>Only works on Firefox atm</li>
+    <li>Example is also hacked together</li>
+  </ul>
+</Notes>
 
 ---
 
@@ -460,6 +470,43 @@ gap: 3vmin;
 /* ... So */
 gap: < "row-gap" > < "column-gap" >;
 ```
+
+---
+
+### Nugget 6
+
+# Components should only care about their inner beauty
+
+![](images/beauty.jpg)
+
+---
+
+![](images/button-nomargin.jpg)
+
+### No margins around it =
+
+# Good button 👍
+
+---
+
+![](images/button-margin.jpg)
+
+### Pushing itself with margin-left =
+# Bad button 👎
+
+---
+
+![](images/button-margin-2.jpg)
+
+---
+
+![](images/button-margin-2.jpg)
+
+## `margin-left: 0` ?
+
+---
+
+![](images/tweet.jpg)
 
 ---
 
@@ -544,13 +591,13 @@ Here are adjacent elements, but margin collapsing also happens with parent & fir
 <iframe
   style={{ width: "100vw", height: "100vh" }}
   scrolling="no"
-  title="Mdvygr"
-  src="//codepen.io/rikukissa/embed/Mdvygr/?height=265&theme-id=0&default-tab=css,result"
+  title="wbqGvo"
+  src="//codepen.io/rikukissa/embed/wbqGvo/?height=265&theme-id=0&default-tab=css,result"
   frameborder="no"
   allowtransparency="true"
   allowfullscreen="true"
 >
-  See the Pen <a href="https://codepen.io/rikukissa/pen/Mdvygr/">Mdvygr</a> by
+  See the Pen <a href="https://codepen.io/rikukissa/pen/wbqGvo/">wbqGvo</a> by
   Riku Rouvila (<a href="https://codepen.io/rikukissa">@rikukissa</a>) on{" "}
   <a href="https://codepen.io">CodePen</a>.
 </iframe>
@@ -653,7 +700,13 @@ e
 
 ---
 
-### 🎧 <br />Listen webbidevaus.fi
+<h1><span style={{
+  "background":"url(https://media.giphy.com/media/jZbqd91nbvhWo/giphy.gif)",
+  "backgroundSize": "cover",
+  "color":"transparent",
+  "fontSize": 300,
+  "WebkitBackgroundClip":"text"
+}}>🎧</span> <br />Listen to webbidevaus.fi</h1>
 
 ---
 
