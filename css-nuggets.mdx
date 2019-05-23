@@ -20,13 +20,11 @@ export const themes = [syntaxHighlighterPrism, theme];
 
 ## CSSNuggets™ 8 kpl
 
-<Notes>
-  - Esittelyt ja millä asialla
-</Notes>
+<Notes>- Esittelyt ja millä asialla</Notes>
 
 ---
 
-# moro
+# Moro!
 
 ---
 
@@ -39,6 +37,19 @@ export const themes = [syntaxHighlighterPrism, theme];
 ---
 
 <Image src="images/nuggets.jpg" />
+
+<Notes>
+  <ul>
+    <li>You might not love CSS, that's fine</li>
+    <li>This is the world we live in</li>
+    <li>
+      Most of the CSS confusion is just about not understanding it's quirks
+    </li>
+    <li>
+      Presentation contains practical tips for everyday use on all skill levels
+    </li>
+  </ul>
+</Notes>
 
 ---
 
@@ -117,6 +128,29 @@ export const themes = [syntaxHighlighterPrism, theme];
 
 ---
 
+```css
+@font-face {
+  font-family: "Roboto";
+  src: url(https://fonts...) format("woff2");
+}
+```
+
+<Notes>Google Fonts provides this, but you want...</Notes>
+
+---
+
+```css
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url(https://fonts...) format("woff2");
+}
+```
+
+<Notes>...this. What to do?</Notes>
+
+---
+
 # Google Fonts <3 font-display
 
 <Notes>Google Fonts just rolled out support for font-display!</Notes>
@@ -160,8 +194,9 @@ background-clip: text;
 ```
 
 <Notes>
-next level<br />
-nuggest are the background
+  next level
+  <br />
+  nuggest are the background
 </Notes>
 
 ---
@@ -172,8 +207,7 @@ nuggest are the background
     backgroundRepeat: "no-repeat",
     fontSize: "300px",
     fontWeight: "bold",
-    background:
-      "url(https://media.giphy.com/media/12p8b9acuBMdYQ/giphy.gif)",
+    background: "url(https://media.giphy.com/media/12p8b9acuBMdYQ/giphy.gif)",
     color: "transparent",
     WebkitBackgroundClip: "text"
   }}
@@ -182,8 +216,9 @@ nuggest are the background
 </span>
 
 <Notes>
-use it with animations<br />
-what ever you can use as background
+  use it with animations
+  <br />
+  what ever you can use as background
 </Notes>
 
 ---
@@ -208,9 +243,7 @@ what ever you can use as background
   backgrounds with gradient
 </span>
 
-<Notes>
-use it with gradient
-</Notes>
+<Notes>use it with gradient</Notes>
 
 ---
 
@@ -228,11 +261,7 @@ use it with gradient
   <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
-
-<Notes>
-here's how it works ->
-</Notes>
-
+<Notes>here's how it works -></Notes>
 
 ---
 
@@ -302,9 +331,7 @@ h1 {
 }
 ```
 
-<Notes>
-Useful? ->
-</Notes>
+<Notes>Useful? -></Notes>
 
 ---
 
@@ -409,7 +436,17 @@ display: flex;
 
 <Image size="contain" src="images/yes.jpg" />
 
-<Notes>...YES, and for IE you can __progressively__ rock grid support</Notes>
+<Notes>...YES, and for IE you can progressively rock grid support</Notes>
+
+---
+
+# Yes!
+
+#### And for IE you can
+
+# progressively rock
+
+#### grid support
 
 ---
 
@@ -468,7 +505,6 @@ autoprefixer({
 ## property with flexbox
 
 ---
-
 
 <Flex />
 
@@ -543,9 +579,7 @@ gap: < "row-gap" > < "column-gap" >;
 
 ![](images/beauty.jpg)
 
-<Notes>
-Component define styles inside their own borders
-</Notes>
+<Notes>Component define styles inside their own borders</Notes>
 
 ---
 
@@ -560,6 +594,7 @@ Component define styles inside their own borders
 ![](images/button-margin.jpg)
 
 ### Pushing itself with margin-left =
+
 # Bad button 👎
 
 ---
@@ -712,15 +747,16 @@ Relative to containers width
     (<a href='https://codepen.io/rikukissa'>@rikukissa</a>) on <a href='https://codepen.io'>CodePen</a>.
   </iframe>
 
-  ```css
-  .container {
-    /* width 200px - 500px */
-  }
+```css
+.container {
+  /* width 200px - 500px */
+}
 
-  .box {
-    padding-top: 50%;
-  }
-  ```
+.box {
+  padding-top: 50%;
+}
+```
+
 </SplitRight>
 
 ---
@@ -733,36 +769,34 @@ div with a background-image and a fixed aspect-ratio
 
 <SplitRight>
 
-  <iframe style={{ width: "40vw", height: "100vh" }}
-    scrolling="no"
-    title="OYzBLd"
-    src="//codepen.io/rikukissa/embed/OYzBLd/?height=265&theme-id=0&default-tab=result"
-    frameBorder="no"
-    allowtransparency="true"
-    allowfullscreen="true"
-  >
-    See the Pen <a href="https://codepen.io/rikukissa/pen/OYzBLd/">OYzBLd</a> by
-    Riku Rouvila (<a href="https://codepen.io/rikukissa">@rikukissa</a>) on{" "}
-    <a href="https://codepen.io">CodePen</a>.
-  </iframe>
+<iframe
+  style={{ width: "40vw", height: "100vh" }}
+  scrolling="no"
+  title="OYzBLd"
+  src="//codepen.io/rikukissa/embed/OYzBLd/?height=265&theme-id=0&default-tab=result"
+  frameBorder="no"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/rikukissa/pen/OYzBLd/">OYzBLd</a> by
+  Riku Rouvila (<a href="https://codepen.io/rikukissa">@rikukissa</a>) on{" "}
+  <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
-  ```css
-  .box {
-    padding-top: 50%;
-    background-image:
-      url('michael.gif');
-    background-size:
-      100% 100%;
-  }
-  ```
+```css
+.box {
+  padding-top: 50%;
+  background-image: url("michael.gif");
+  background-size: 100% 100%;
+}
+```
 
 </SplitRight>
-
-
 
 ---
 
 ### Nugget 8
+
 # CSS TRouBLe?!
 
 ---
@@ -829,10 +863,7 @@ e
 
 # Nugget 9
 
-<Notes>
-- Dankest nugget of them all
-</Notes>
-
+<Notes>- Dankest nugget of them all</Notes>
 
 ---
 
