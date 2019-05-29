@@ -337,8 +337,8 @@ h1 {
 
 <Notes>
 
-
 Useful? ->
+
 <br />
 I think we can all agree
 <br />
@@ -522,15 +522,15 @@ autoprefixer({
 ## property with flexbox
 
 <Notes>
-cool new (incoming) property
-<br />
-<br />
-flexbox gets a bad rap
-<br />
-<br />
-grid has progressed flex development
-<br />
-<br />
+  cool new (incoming) property
+  <br />
+  <br />
+  flexbox gets a bad rap
+  <br />
+  <br />
+  grid has progressed flex development
+  <br />
+  <br />
 </Notes>
 
 ---
@@ -538,10 +538,10 @@ grid has progressed flex development
 <Flex />
 
 <Notes>
-Inline elements
-<br />
-<br />
-wrap when the container shrinks
+  Inline elements
+  <br />
+  <br />
+  wrap when the container shrinks
 </Notes>
 
 ---
@@ -703,6 +703,30 @@ Here are adjacent elements, but margin collapsing also happens with parent & fir
 
 ---
 
+## 8.3.1 Collapsing margins
+
+In CSS, the adjoining margins of two or more boxes (which might or might not be siblings) can combine to form a single margin. Margins that combine this way are said to collapse, and the resulting combined margin is called a collapsed margin.
+
+<Notes>
+  <ul>
+    <li>Margins collapse when two vertical margins contact</li>
+    <li>
+      If one margin is greater than the other, the bigger overrides the smaller
+      (as usually happens in life)
+    </li>
+  </ul>
+</Notes>
+
+---
+
+![](images/margin1.jpg)
+
+---
+
+![](images/margin2.jpg)
+
+---
+
 ### Weird, huh?!
 
 ![](images/margins.jpg)
@@ -716,11 +740,20 @@ Here are adjacent elements, but margin collapsing also happens with parent & fir
       If one margin is negative, the negative margin is subtracted from the
       positive margin.
     </li>
-    <li>
-      The general meaning of "margin" isn't to convey "move this over by 10px"
-      but rather, "there must be 10px of empty space beside this element."
-    </li>
   </ul>
+</Notes>
+
+---
+
+![](images/margin3.png)
+
+---
+
+![](images/margin4.png)
+
+<Notes>
+  The general meaning of "margin" isn't to convey "move this over by 10px" but
+  rather, "there must be 10px of empty space beside this element."
 </Notes>
 
 ---
@@ -817,12 +850,9 @@ div with a background-image and a fixed aspect-ratio
 
 ```css
 .box {
-  padding-top:
-    50%;
-  background-image:
-    url("michael.gif");
-  background-size:
-    100% 100%;
+  padding-top: 50%;
+  background-image: url("michael.gif");
+  background-size: 100% 100%;
 }
 ```
 
